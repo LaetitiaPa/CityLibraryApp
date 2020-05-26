@@ -83,11 +83,11 @@ public class BatchRestController {
 
     }
 
-   /* @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/list/update", method = RequestMethod.GET)
     public void updateReminderList() {
 
 
-    }*/
+    }
 
     @RequestMapping(value = "/mail", method = RequestMethod.GET)
     public void sendEmail() {
