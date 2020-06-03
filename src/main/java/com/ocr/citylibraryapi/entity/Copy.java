@@ -12,6 +12,8 @@ public class Copy {
 
     private boolean availability;
 
+    private int copies;
+
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "book_id")
     private Book book;
@@ -19,8 +21,6 @@ public class Copy {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "library_id")
     private Library library;
-
-
 
     public boolean isAvailability() {
         return availability;
@@ -62,6 +62,13 @@ public class Copy {
         this.library = library;
     }
 
+    public int getCopies() {
+        return copies;
+    }
+
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
 
 
     public Copy() {

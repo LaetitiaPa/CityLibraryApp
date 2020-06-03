@@ -21,7 +21,9 @@ public class Lending {
 
     private boolean tag;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    private boolean isReminderList;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
     @JoinColumn(name = "copy_id")
     private Copy copy;
 
@@ -84,7 +86,13 @@ public class Lending {
         this.tag = tag;
     }
 
+    public boolean isReminderList() {
+        return isReminderList;
+    }
 
+    public void setReminderList(boolean reminderList) {
+        isReminderList = reminderList;
+    }
     public Lending() {
     }
 

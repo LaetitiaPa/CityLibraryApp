@@ -22,10 +22,15 @@ public class Customer {
 
     private String password;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "Customer_Role",
-            joinColumns = {@JoinColumn(name = "customer_id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id")})
+    private boolean active;
+
+    @ManyToMany
+    @JoinTable(
+            name = "customers_roles",
+            joinColumns = @JoinColumn(
+                    name = "customer_id", referencedColumnName = "customer_id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "role_id"))
     private List<Role> roles;
 
     public Long getId() {
@@ -60,12 +65,36 @@ public class Customer {
         this.email = email;
     }
 
+    public Customer(String firstName, String lastName, String email, String password, boolean active, List<Role> roles) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.active = active;
+        this.roles = roles;
+    }
+
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 
     @Override
@@ -82,10 +111,5 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String firstName, String lastName, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-    }
+
 }

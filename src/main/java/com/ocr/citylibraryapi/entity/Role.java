@@ -12,6 +12,9 @@ public class Role {
 
     private String role;
 
+    @ManyToMany(mappedBy = "roles")
+    private List<Customer> customers;
+
     public Long getId() {
         return id;
     }

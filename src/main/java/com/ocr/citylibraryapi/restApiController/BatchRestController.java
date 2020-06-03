@@ -64,10 +64,11 @@ public class BatchRestController {
         List<Lending> allLending = lendingDao.findAll();
         for(int i = 0; i < allLending.size(); i++ ) {
             Lending currentLending = allLending.get(i);
-            Customer customer = currentLending.getCustomer();
 
-            if(currentLending.isTag() == true ) {
+            if(currentLending.isTag() == true && currentLending.isReminderList() == false ) {
+                Customer customer = currentLending.getCustomer();
                 ReminderList reminder = new ReminderList();
+                currentLending.setReminderList(true);
                 reminder.setCustomerEmail(customer.getEmail());
                 Copy ownedCopy = currentLending.getCopy();
                 Long copyId = ownedCopy.getId();

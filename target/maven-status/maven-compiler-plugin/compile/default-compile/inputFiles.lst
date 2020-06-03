@@ -5,7 +5,9 @@ C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\ci
 C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\CitylibraryApiApplication.java
 C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\entity\Book.java
 C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\entity\Customer.java
+C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\repository\CopyDao.java
 C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\restApiController\BookRestController.java
+C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\restApiController\AuthenticationRestController.java
 C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\repository\BookDao.java
 C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\repository\CustomerDao.java
 C:\Users\lpape\Desktop\Formation DA Java\P7\library-api\src\main\java\com\ocr\citylibraryapi\repository\BookRepositoryCustom.java
